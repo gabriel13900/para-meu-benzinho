@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continúa namorando comigo?</title>
+</head>
+
+<body>
+    <div id="conteudo">
+        <h2>Continúa comigo bb?</h2>
+        <button onclick="sim()">Sim</button>
+        <button onclick="desvia()" onmouseover="desvia()">Não</button>
+    </div>
+</body>
+
+<style>
+    #conteudo {
+        background: #eb5b5be3;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: auto;
+        padding: 10pc;
+        text-align: center;
+    }
+</style>
+
+<script>
+    function sim() {
+        alert("Tbm te amo, lanchinho mais tarde? ☺")
+    }
+</script>
+<script>
+    function desvia() {
+        var btn = document.querySelector("#conteudo > button:nth-child(3)")
+        console.log(btn);
+        console.log("Isso é feio, para!");
+        btn.style.position = 'absolute';
+        btn.style.left = randomNumber(20, 80);
+        btn.style.bottom = randomNumber(20, 80);
+        alert("Isso é feio, para!")
+    }
+
+
+    function randomNumber(min, max) {
+        return Math.random() * (max - min) + min + "%";
+    }
+
+
+
+
+</script>
+
+</html>
